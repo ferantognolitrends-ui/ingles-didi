@@ -3,567 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia da Professora — Didi ensina inglês</title>
+<title>Aulas de Inglês da Didi — Lorenzo & Lucas</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F4F8F4;color:#1A1A1A;line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F0FAFA;color:#1A1A1A}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,#1B6B4A 0%,#2D9B6E 60%,#3BBEC0 100%);padding:48px 36px 40px;color:#fff}
-.hero-tag{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:10px}
-.hero-title{font-size:36px;font-weight:700;line-height:1.15;margin-bottom:8px}
-.hero-sub{font-size:15px;color:rgba(255,255,255,0.78);max-width:520px}
+.hero{background:linear-gradient(160deg,#7DD8DC 0%,#2AAFB8 100%);padding:52px 36px 44px;position:relative}
+.hero-title{font-size:48px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:6px}
+.hero-ast{font-size:28px;color:rgba(255,255,255,0.5);vertical-align:super;margin-left:2px}
+.hero-sub{font-size:19px;color:rgba(255,255,255,0.85);margin-bottom:4px}
+.hero-note{font-size:12px;color:rgba(255,255,255,0.6);font-style:italic}
 
 /* LAYOUT */
-.wrap{max-width:780px;margin:0 auto;padding:36px 24px 80px}
+.page{max-width:740px;margin:0 auto;padding:32px 24px 60px}
 
-/* SECTION */
-.sec{margin-bottom:40px}
-.sec-num{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#2D9B6E;margin-bottom:6px}
-.sec-title{font-size:21px;font-weight:700;color:#1A1A1A;margin-bottom:4px}
-.sec-sub{font-size:13px;color:#666;margin-bottom:20px}
+/* SECTION HEADING */
+.sec{margin-bottom:24px}
+.sec-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding-bottom:6px;border-bottom:1.5px solid #2AAFB8}
+.sec-arrow{font-size:16px;color:#2AAFB8;font-weight:700}
+.sec-title{font-size:16px;font-weight:600;color:#1A1A1A}
+.body-text{font-size:13px;color:#444;line-height:1.65}
 
-/* PRINCIPLE CARDS */
-.principles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:6px}
-.princ{background:#fff;border:1px solid #E4EDE7;border-radius:12px;padding:16px;border-left:4px solid}
-.princ-icon{font-size:22px;margin-bottom:8px}
-.princ-title{font-size:13px;font-weight:700;color:#1A1A1A;margin-bottom:4px}
-.princ-body{font-size:12px;color:#555;line-height:1.55}
-.princ-tip{font-size:11px;color:#2D9B6E;font-weight:600;margin-top:6px;padding-top:6px;border-top:1px dashed #D0EAD8}
+/* TABLES */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:2px}
+.tbl td,.tbl th{padding:8px 10px;border-bottom:0.5px solid #E8E8E8;vertical-align:top;line-height:1.5}
+.tbl thead td,.tbl thead th{background:#2AAFB8;color:#fff;font-weight:600;font-size:12px}
+.tbl .lbl{color:#888;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:#EAF8F9}
+.tbl .val{color:#333}
+.tbl .bold{font-weight:600;color:#2AAFB8}
+.tbl tr:last-child td{border-bottom:none}
+.tbl .total-row td{background:#2AAFB8;color:#fff;font-weight:600}
+.tbl-note{font-size:11px;color:#999;font-style:italic;margin-top:5px}
 
-/* STEPS */
-.steps{counter-reset:step}
-.step{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EEF3EF}
-.step:last-child{border-bottom:none}
-.step-num{width:36px;height:36px;border-radius:50%;background:#2D9B6E;color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.step-content{}
-.step-title{font-size:14px;font-weight:700;color:#1A1A1A;margin-bottom:3px}
-.step-body{font-size:12.5px;color:#444;line-height:1.55}
-.step-action{font-size:11.5px;background:#EBF7EF;color:#1B6B4A;padding:5px 10px;border-radius:6px;margin-top:7px;display:inline-block;font-weight:600}
+/* PRINCIPLE LIST */
+.principle{display:flex;gap:8px;padding:7px 0;border-bottom:0.5px solid #EFEFEF;font-size:12.5px;line-height:1.5}
+.principle:last-child{border-bottom:none}
+.p-dash{color:#2AAFB8;flex-shrink:0;font-weight:700;margin-top:1px}
+.p-bold{font-weight:600;color:#1A1A1A}
+.p-rest{color:#444}
 
-/* CHECKLIST */
-.checklist-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.cl-card{background:#fff;border:1px solid #E4EDE7;border-radius:12px;overflow:hidden}
-.cl-head{padding:12px 16px;font-size:13px;font-weight:700;color:#fff}
-.cl-body{padding:14px 16px}
-.cl-phase{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#999;margin:10px 0 5px}
-.cl-phase:first-child{margin-top:0}
-.cl-item{display:flex;gap:8px;align-items:flex-start;padding:4px 0;font-size:12px;color:#333;line-height:1.45}
-.cl-item::before{content:"☐";font-size:13px;flex-shrink:0;color:#AAA;margin-top:0px}
-.cl-time{font-size:10px;color:#999;margin-left:auto;flex-shrink:0;padding-left:6px;white-space:nowrap}
+/* DIVIDER */
+.divider{border:none;border-top:1.5px solid #E0E0E0;margin:32px 0}
+.page-label{font-size:11px;font-weight:600;color:#AAA;text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:28px}
 
-/* BLUEPRINT */
-.blueprint{margin-top:4px}
-.bp-legend{display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap}
-.bp-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.bp-leg-item{display:flex;align-items:flex-start;gap:7px;font-size:12px;color:#555}
-.bp-leg-label{font-weight:600;color:#333;display:block;font-size:11px}
+/* PLATFORM CARDS */
+.platform{background:#fff;border:1px solid #E0E0E0;border-radius:12px;overflow:hidden;margin-bottom:18px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.phead{padding:12px 16px;display:flex;align-items:center;gap:10px}
+.phead-icon{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.phead-info{flex:1;min-width:0}
+.phead-title{font-size:13px;font-weight:600;color:#fff}
+.phead-url{font-size:10.5px;color:rgba(255,255,255,0.72);margin-top:1px}
+.phead-free{font-size:10px;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,0.2);color:#fff;white-space:nowrap;flex-shrink:0;font-weight:500}
+.cols{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:14px 16px}
+.col:first-child{border-right:1px solid #F0F0F0}
+.col-label{font-size:10.5px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:9px;display:flex;align-items:center;gap:5px}
+.age-pill{font-size:9.5px;padding:1px 6px;border-radius:10px;background:#F0F0F0;color:#666;font-weight:400}
+.img-wrap{width:100%;height:84px;border-radius:8px;overflow:hidden;margin-bottom:9px;background:#F5F5F5;display:flex;align-items:center;justify-content:center}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.img-fallback{display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:30px}
+.act-header{display:flex;align-items:flex-start;gap:5px;margin-bottom:4px;flex-wrap:wrap}
+.act-name{font-size:12.5px;font-weight:600;color:#1A1A1A;line-height:1.4}
+.type-badge{font-size:9.5px;padding:2px 6px;border-radius:10px;white-space:nowrap;flex-shrink:0;margin-top:2px;font-weight:500}
+.act-link{margin-bottom:7px}
+.act-link a{font-size:10.5px;color:#0078A8;text-decoration:none;word-break:break-all;line-height:1.5}
+.act-link a:hover{text-decoration:underline}
+.act-desc{font-size:11.5px;color:#444;line-height:1.55;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:10px;padding:2px 7px;border-radius:10px;border:1px solid #E8E8E8;color:#555;background:#FAFAFA}
 
-.month-block{margin-bottom:24px;border:1px solid #E4EDE7;border-radius:14px;overflow:hidden;background:#fff}
-.month-head{padding:12px 20px;display:flex;align-items:center;gap:12px}
-.month-num{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8)}
-.month-title{font-size:16px;font-weight:700;color:#fff}
-.month-milestone{font-size:11px;color:rgba(255,255,255,0.7);margin-left:auto;white-space:nowrap}
-.month-cols{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid #F0F0F0}
-.month-col{padding:14px 16px;border-right:1px solid #F0F0F0}
-.month-col:last-child{border-right:none}
-.col-tag{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:1px dashed}
-.col-item{font-size:11.5px;color:#333;padding:3px 0 3px 12px;position:relative;line-height:1.45}
-.col-item::before{content:"·";position:absolute;left:3px;color:#AAA}
-.col-item strong{color:#1A1A1A;font-weight:600}
-.col-item.goal{background:#F0FAF5;border-radius:5px;padding:4px 8px 4px 20px;margin-top:4px}
-.col-item.goal::before{content:"✓";color:#2D9B6E;font-size:10px}
+/* RESOURCE INTRO */
+.res-intro{font-size:13px;color:#444;line-height:1.65;margin-bottom:20px}
 
-/* FOOTER NOTE */
-.foot-note{background:#1B6B4A;color:rgba(255,255,255,0.85);padding:20px 24px;border-radius:12px;font-size:13px;line-height:1.7;margin-top:16px}
-.foot-note strong{color:#fff}
-
-@media(max-width:560px){
-  .principles{grid-template-columns:1fr}
-  .checklist-grid{grid-template-columns:1fr}
-  .month-cols{grid-template-columns:1fr}
-  .month-col{border-right:none;border-bottom:1px solid #F0F0F0}
-  .month-col:last-child{border-bottom:none}
-  .hero-title{font-size:26px}
+@media(max-width:520px){
+  .hero-title{font-size:32px}
+  .cols{grid-template-columns:1fr}
+  .col:first-child{border-right:none;border-bottom:1px solid #F0F0F0}
 }
 </style>
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-tag">Guia da Professora</div>
-  <div class="hero-title">Didi ensina inglês<br>do zero ao A1/A2</div>
-  <div class="hero-sub">Lorenzo (11 anos) · Lucas (7 anos) · 6 meses · tudo que precisas saber para começar hoje</div>
+  <div class="hero-title">Aulas de Inglês<span class="hero-ast">*</span></div>
+  <div class="hero-sub">da Didi &nbsp;·&nbsp; Lorenzo &amp; Lucas</div>
+  <div class="hero-note">* Proposta de aprendizado — 2026</div>
 </div>
 
-<div class="wrap">
+<div class="page">
 
-<!-- ═══════════════════════════════════════════════════════
-     1. PRINCÍPIOS BÁSICOS
-════════════════════════════════════════════════════════ -->
+<!-- QUEM VAI ENSINAR -->
 <div class="sec">
-  <div class="sec-num">Parte 1</div>
-  <div class="sec-title">Princípios básicos de ensino para crianças</div>
-  <div class="sec-sub">O que a neurociência e a pedagogia dizem sobre como crianças realmente aprendem línguas.</div>
-
-  <div class="principles">
-
-    <div class="princ" style="border-left-color:#2D9B6E">
-      <div class="princ-icon">⏱️</div>
-      <div class="princ-title">A atenção é curta — e isso é normal</div>
-      <div class="princ-body">O Lucas tem 7–10 minutos de foco intenso. O Lorenzo, 15–20 min por tarefa. Não é falta de empenho — é desenvolvimento neurológico. Aulas longas com um único formato não funcionam. A estrutura de 5 momentos distintos existe por isso: o cérebro precisa de quebras e variedade para consolidar o que aprendeu.</div>
-      <div class="princ-tip">→ Nunca uma actividade por mais de 12 minutos para o Lucas. Troca o formato, não o tema.</div>
-    </div>
-
-    <div class="princ" style="border-left-color:#3BBEC0">
-      <div class="princ-icon">🎮</div>
-      <div class="princ-title">O jogo é o trabalho sério da criança</div>
-      <div class="princ-body">Quando a criança joga, o hipocampo (memória de longo prazo) está mais activo do que em qualquer outra actividade. Jogos não são prémio depois da aula — são o método. Simon Says, Memory, Wordwall Gameshow, flashcards com pontuação: tudo isso é pedagogia de alta eficácia, não entretenimento.</div>
-      <div class="princ-tip">→ Se precisares escolher entre "ensinar" e "jogar", joga sempre. O vocabulário vai ficar.</div>
-    </div>
-
-    <div class="princ" style="border-left-color:#F0A500">
-      <div class="princ-icon">🔁</div>
-      <div class="princ-title">Repetição lúdica — não repetição mecânica</div>
-      <div class="princ-body">Uma criança precisa de encontrar uma palavra nova 7–12 vezes em contextos diferentes para a incorporar. A diferença entre decorar e aprender é o contexto: dizer "cat" vinte vezes numa lista não funciona. Dizer "cat" numa canção, num jogo, numa história e num desenho — isso fica para sempre. Repete os temas, não os exercícios.</div>
-      <div class="princ-tip">→ O mesmo vocabulário aparece no jogo, na canção, no desenho e na conversa. Isso é planeamento.</div>
-    </div>
-
-    <div class="princ" style="border-left-color:#9B59B6">
-      <div class="princ-icon">👂</div>
-      <div class="princ-title">Listening e Speaking primeiro — sempre</div>
-      <div class="princ-body">É exactamente como aprendemos a falar a língua materna: anos a ouvir antes de falar, anos a falar antes de ler, e só depois a escrever. Crianças que tentam aprender inglês "pelo livro" sofrem porque o sequenciamento natural está invertido. O Lucas não precisa de ler "cat" — precisa de ouvir, imitar e depois reconhecer. O Lorenzo pode já usar um pouco de escrita, mas a fala lidera.</div>
-      <div class="princ-tip">→ Para Lucas: 80% listening/speaking, 20% visual. Para Lorenzo: 60/40. Zero gramática no papel no 1º mês.</div>
-    </div>
-
-    <div class="princ" style="border-left-color:#E74C3C">
-      <div class="princ-icon">❤️</div>
-      <div class="princ-title">A relação é o método</div>
-      <div class="princ-body">O neurocientista Humberto Maturana mostrou que aprendemos em redes de afecto. Uma criança aprende mais rápido com alguém em quem confia do que com qualquer método. O facto de seres a tia não é uma desvantagem pedagógica — é o teu maior activo. Errar contigo é seguro. Tentar contigo é seguro. E é nessa segurança que a língua entra.</div>
-      <div class="princ-tip">→ Quando uma aula "não funciona", raramente é o conteúdo. Verifica a relação, a energia, o cansaço.</div>
-    </div>
-
-    <div class="princ" style="border-left-color:#1ABC9C">
-      <div class="princ-icon">🎯</div>
-      <div class="princ-title">Menos é mais — máximo 5 palavras novas por aula</div>
-      <div class="princ-body">A memória de trabalho de uma criança processa 4–7 itens novos por sessão. Mais do que isso e nada fica. Prefere sempre introduzir 4 palavras bem contextualizadas do que 20 palavras numa lista. A profundidade de uso importa mais do que a largura do vocabulário. Revisão > introdução nova. Sempre.</div>
-      <div class="princ-tip">→ Regra de ouro: se saíste da aula e introduziste 3 coisas novas, foi uma boa aula. Não 15.</div>
-    </div>
-
-  </div>
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Quem vai ensinar</span></div>
+  <p class="body-text">Didi — Brazilian (Italian and Uruguayan), 8 anos vividos em Londres e com formação universitária na Inglaterra. Fluente em inglês com conhecimento da língua em contexto real. Vai ensinar os sobrinhos com um método baseado nas abordagens que estão acostumados, pensado para a idade e o jeito de aprender de cada um.</p>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     2. 5 PASSOS PARA APRENDER A ENSINAR DO ZERO
-════════════════════════════════════════════════════════ -->
+<!-- OS ALUNOS -->
 <div class="sec">
-  <div class="sec-num">Parte 2</div>
-  <div class="sec-title">5 passos para aprender a ensinar do zero</div>
-  <div class="sec-sub">Do planeamento à avaliação — sem jargão pedagógico, só o essencial.</div>
-
-  <div class="step">
-    <div class="step-num">1</div>
-    <div class="step-content">
-      <div class="step-title">Aprende a estrutura antes do conteúdo</div>
-      <div class="step-body">Antes de pensar "o que vou ensinar?", tens de ter clara a estrutura dos 5 momentos de cada aula (ritual → revisão → conteúdo → criação → encerramento). Quando a estrutura está automática, podes focar energia no conteúdo e na relação — não na logística. Passa as primeiras duas semanas a praticar só a estrutura, com qualquer vocabulário simples que já saibas.</div>
-      <div class="step-action">Acção agora: Imprime o checklist diário desta página. Usa-o nas primeiras 6 aulas sem falhar.</div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">2</div>
-    <div class="step-content">
-      <div class="step-title">Planeia em 3 camadas: mês, semana, aula</div>
-      <div class="step-body">Camada 1 — O que queremos alcançar este mês? (ex: vocabulário de animais + "I like / I don't like"). Camada 2 — O que vamos explorar esta semana dentro do projecto? Camada 3 — O que fazemos hoje, passo a passo, com timing? Não precisas de um plano perfeito — precisas de uma direcção clara e materiais prontos. Improviso é para professores experientes. Tu precisas de preparação.</div>
-      <div class="step-action">Acção agora: Antes de cada aula, escreve em 3 linhas: tema, 3 actividades e uma frase que queres que eles digam no fim.</div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">3</div>
-    <div class="step-content">
-      <div class="step-title">Observa primeiro, corrige depois — e raramente</div>
-      <div class="step-body">O maior erro de professores iniciantes é corrigir em excesso. Cada correcção interrompe o fluxo e envia ao cérebro um sinal de alarme que inibe a produção. A técnica correcta chama-se "recast": o aluno diz "I goed to school", tu respondes naturalmente "oh, you went to school! cool, and what did you do there?" — a forma correcta entrou sem humilhação. Para o Lucas, zero correcções explícitas. Para o Lorenzo, no máximo uma por aula, e apenas quando ele próprio pediu ajuda.</div>
-      <div class="step-action">Acção agora: Em vez de "not quite" ou "that's wrong", usa sempre "nice try! it's actually ___" e continua.</div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">4</div>
-    <div class="step-content">
-      <div class="step-title">Mantém um diário de 3 linhas por aula</div>
-      <div class="step-body">Não um relatório. Três linhas no telemóvel depois de cada aula: O que funcionou? O que não funcionou? O que quero testar na próxima? Isto é avaliação real. Professores experientes chamam-lhe "reflexão docente" — a única forma de melhorar sem um supervisor. Ao fim de 6 semanas vais ter um padrão claro: o que funciona com o Lorenzo, o que funciona com o Lucas, o que não funciona de todo.</div>
-      <div class="step-action">Acção agora: Cria uma nota no telemóvel chamada "Diário Aulas" e escreve depois da primeira sessão.</div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-num">5</div>
-    <div class="step-content">
-      <div class="step-title">Avalia pelo engajamento e pela produção — não pela performance</div>
-      <div class="step-body">Não há testes neste método. A avaliação acontece todos os dias, observando: eles pedem para continuar? Usam inglês espontaneamente fora da aula? Fazem perguntas em inglês? Riem de uma piada em inglês? Corrigem-se sem serem corrigidos? Essas são as evidências reais de aquisição de língua. No fim de cada bloco de 3 semanas, revê os artefactos produzidos (o desenho do Lucas, o texto do Lorenzo) — são o teu "boletim".</div>
-      <div class="step-action">Acção agora: Guarda uma foto do primeiro produto de cada um. Ao fim de 3 meses, compara — vais ficar surpreendida.</div>
-    </div>
-  </div>
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Os alunos</span></div>
+  <table class="tbl">
+    <thead><tr><td width="50%">Lorenzo — 11 anos</td><td width="50%">Lucas — 7 anos</td></tr></thead>
+    <tbody>
+      <tr><td class="lbl">Nível atual</td><td class="lbl">Nível atual</td></tr>
+      <tr><td class="val">Iniciante — começa do zero?</td><td class="val">Iniciante — começa do zero?</td></tr>
+      <tr><td class="lbl">Duração das aulas</td><td class="lbl">Duração das aulas</td></tr>
+      <tr><td class="val">50–60 minutos por semana</td><td class="val">25–30 minutos por semana</td></tr>
+      <tr><td class="lbl">Como aprende melhor</td><td class="lbl">Como aprende melhor</td></tr>
+      <tr><td class="val">Desafios, projetos com sentido real, cultura pop, jogos com regras, autonomia nas escolhas</td><td class="val">Histórias, música, movimento, repetição rítmica, arte, exploração sensorial</td></tr>
+      <tr><td class="lbl">Meta em 6 meses</td><td class="lbl">Meta em 6 meses</td></tr>
+      <tr><td class="val">Conversar sobre rotina, ler textos curtos, escrever frases com autonomia</td><td class="val">Compreender comandos simples, cantar músicas, usar frases básicas do dia a dia</td></tr>
+    </tbody>
+  </table>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════
-     3. CHECKLIST DIÁRIO
-════════════════════════════════════════════════════════ -->
+<!-- COMO AS AULAS FUNCIONAM -->
 <div class="sec">
-  <div class="sec-num">Parte 3</div>
-  <div class="sec-title">Checklist diário de aula</div>
-  <div class="sec-sub">Imprime, plastifica, usa. Versão Lorenzo (60 min) e versão Lucas (30 min).</div>
-
-  <div class="checklist-grid">
-
-    <!-- LORENZO -->
-    <div class="cl-card">
-      <div class="cl-head" style="background:#2D9B6E">Lorenzo — 50 a 60 min</div>
-      <div class="cl-body">
-
-        <div class="cl-phase">Antes (5 min)</div>
-        <div class="cl-item">Tenho o tema e os materiais prontos<span class="cl-time">-5 min</span></div>
-        <div class="cl-item">Sei qual é a nova estrutura/vocabulário de hoje<span class="cl-time"></span></div>
-        <div class="cl-item">Tenho um "plano B" se ele resistir ao plano A<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Check-in (5 min)</div>
-        <div class="cl-item">Conversa real em inglês: "how was your week?"<span class="cl-time">5'</span></div>
-        <div class="cl-item">Confirmei/ajustei o projecto em curso com ele<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Revisão / Jogo (10 min)</div>
-        <div class="cl-item">Actividade de revisão do vocabulário anterior<span class="cl-time">10'</span></div>
-        <div class="cl-item">Tem pontuação ou desafio (não é só "lembras?")<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Projecto principal (20–25 min)</div>
-        <div class="cl-item">Vídeo / leitura / pesquisa / debate<span class="cl-time">20–25'</span></div>
-        <div class="cl-item">Introduzi nova estrutura no contexto (não na regra)<span class="cl-time"></span></div>
-        <div class="cl-item">Fiz no máximo 1 correcção — e só quando ele pediu<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Produção autoral (12–15 min)</div>
-        <div class="cl-item">Ele criou algo real: review / texto / script / guia<span class="cl-time">12–15'</span></div>
-        <div class="cl-item">O produto é para comunicar algo, não para cumprir<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Reflexão (3–5 min)</div>
-        <div class="cl-item">"What did you learn? What surprised you?"<span class="cl-time">3–5'</span></div>
-        <div class="cl-item">Ele escolheu algo para a próxima aula<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Depois (2 min)</div>
-        <div class="cl-item">Guardei o produto / foto do trabalho<span class="cl-time"></span></div>
-        <div class="cl-item">Escrevi 3 linhas no diário<span class="cl-time"></span></div>
-      </div>
-    </div>
-
-    <!-- LUCAS -->
-    <div class="cl-card">
-      <div class="cl-head" style="background:#3BBEC0">Lucas — 25 a 30 min</div>
-      <div class="cl-body">
-
-        <div class="cl-phase">Antes (3 min)</div>
-        <div class="cl-item">Materiais na mão: flashcards, papel, crayons<span class="cl-time">-3 min</span></div>
-        <div class="cl-item">Sei a canção de abertura e encerramento de hoje<span class="cl-time"></span></div>
-        <div class="cl-item">Tenho a sacola/caixa misteriosa se precisar<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Ritual de abertura (3 min)</div>
-        <div class="cl-item">Mesma canção de sempre — sem excepções<span class="cl-time">3'</span></div>
-        <div class="cl-item">Energia alta, contacto visual, sorriso<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Revisão lúdica (5 min)</div>
-        <div class="cl-item">Simon Says / flashcards / sacola misteriosa<span class="cl-time">5'</span></div>
-        <div class="cl-item">Ele mexeu no corpo — não ficou só a ouvir<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Conteúdo novo (10 min)</div>
-        <div class="cl-item">Introduzido via história OU música OU jogo<span class="cl-time">10'</span></div>
-        <div class="cl-item">Máximo 5 palavras novas — dentro do projecto<span class="cl-time"></span></div>
-        <div class="cl-item">Ele repetiu as palavras em contexto (não em lista)<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Actividade criativa (7 min)</div>
-        <div class="cl-item">Desenhou / colou / montou / moveu o corpo<span class="cl-time">7'</span></div>
-        <div class="cl-item">Produziu algo com as mãos que representa o que aprendeu<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Ritual de encerramento (3 min)</div>
-        <div class="cl-item">Mesma goodbye song ou frase ritual — sempre igual<span class="cl-time">3'</span></div>
-        <div class="cl-item">Terminou com energia positiva<span class="cl-time"></span></div>
-
-        <div class="cl-phase">Depois (2 min)</div>
-        <div class="cl-item">Foto do produto/desenho guardada<span class="cl-time"></span></div>
-        <div class="cl-item">3 linhas no diário: o que funcionou<span class="cl-time"></span></div>
-      </div>
-    </div>
-
-  </div>
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Como as aulas funcionam</span></div>
+  <p class="body-text">As aulas não seguem um livro didático — seguem o interesse real de cada aluno. A cada bloco de 3 semanas, Lorenzo e Lucas escolhem um tema que querem explorar: dinossauros, jogos, oceanos, super-heróis, culinária, natureza. O inglês entra como ferramenta para explorar esse tema. A criança aprende melhor quando tem razão para aprender — quando a língua serve para descobrir algo que ela já quer descobrir.</p>
 </div>
 
-
-<!-- ═══════════════════════════════════════════════════════
-     4. BLUEPRINT — DUAS JORNADAS
-════════════════════════════════════════════════════════ -->
+<!-- O QUE ORIENTA O MÉTODO -->
 <div class="sec">
-  <div class="sec-num">Parte 4</div>
-  <div class="sec-title">Blueprint: a jornada em 6 meses</div>
-  <div class="sec-sub">Três colunas por mês — o que Didi faz/aprende, o que o Lorenzo experiencia e produz, o que o Lucas experiencia e produz. Marcos mensais: avaliação observacional a cada 4 semanas.</div>
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">O que orienta o método</span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">A língua é vivida, não memorizada.</span> <span class="p-rest">Vocabulário entra por histórias, jogos e projetos — não por listas para decorar.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">A criança tem voz no que aprende.</span> <span class="p-rest">Lorenzo escolhe os temas. Lucas explora livremente. Isso cria compromisso real.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">O erro é parte do processo.</span> <span class="p-rest">Não se corrige compulsivamente — a forma correta repete-se naturalmente.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">Ritmo e estrutura previsíveis.</span> <span class="p-rest">Momentos fixos em cada aula criam segurança — essencial para o Lucas.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">O aprendizado passa pelo corpo.</span> <span class="p-rest">Músicas, movimento e arte ancoram o vocabulário de forma duradoura.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">O produto importa.</span> <span class="p-rest">Cada aluno cria algo real no fim de cada projeto: história, guia, desenho legendado.</span></span></div>
+  <div class="principle"><span class="p-dash">–</span><span><span class="p-bold">A tia como professora é vantagem.</span> <span class="p-rest">Confiança e afeto são o maior acelerador de aprendizado que existe.</span></span></div>
+</div>
 
-  <div class="bp-legend">
-    <div class="bp-leg-item"><div class="bp-dot" style="background:#2D6A4F;margin-top:4px"></div><div><span class="bp-leg-label">Didi (professora)</span>tarefas, aprendizagem didáctica, foco da aula</div></div>
-    <div class="bp-leg-item"><div class="bp-dot" style="background:#2AAFB8;margin-top:4px"></div><div><span class="bp-leg-label">Lorenzo (11 anos)</span>experiência, tarefas e marcos de aquisição</div></div>
-    <div class="bp-leg-item"><div class="bp-dot" style="background:#F0A500;margin-top:4px"></div><div><span class="bp-leg-label">Lucas (7 anos)</span>experiência, tarefas e marcos de aquisição</div></div>
+<!-- PROJETOS DE ESTUDO -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Projetos de estudo</span></div>
+  <table class="tbl">
+    <thead><tr><td width="18%"></td><td width="41%">Lorenzo — 11 anos</td><td width="41%">Lucas — 7 anos</td></tr></thead>
+    <tbody>
+      <tr><td class="bold">Projeto 1</td><td class="val">Minecraft &amp; Gaming — vocabulário de jogos, reviews em inglês</td><td class="val">Ocean Friends — animais marinhos, cores, sons</td></tr>
+      <tr><td class="bold">Projeto 2</td><td class="val">Documentários — assistir clipes, resumir, debater</td><td class="val">Superheroes — poderes, cores, criação do herói</td></tr>
+      <tr><td class="bold">Projeto 3</td><td class="val">Guia de Viagem — pesquisar um destino em inglês</td><td class="val">My Garden — plantas, natureza, estações</td></tr>
+    </tbody>
+  </table>
+  <p class="tbl-note">Os temas são sugestões — os alunos escolhem.</p>
+</div>
+
+<!-- ESTRUTURA DE CADA AULA -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Estrutura de cada aula</span></div>
+  <table class="tbl">
+    <thead><tr><td width="50%">Lorenzo — 50 a 60 minutos</td><td width="50%">Lucas — 25 a 30 minutos</td></tr></thead>
+    <tbody>
+      <tr><td class="val"><strong style="color:#2AAFB8">Check-in (5 min)</strong> — conversa em inglês: como foi a semana?</td><td class="val"><strong style="color:#2AAFB8">Abertura (3 min)</strong> — mesma canção de sempre, cria segurança</td></tr>
+      <tr><td class="val"><strong style="color:#2AAFB8">Revisão / jogo (10 min)</strong> — quiz, cartas, desafio com pontuação</td><td class="val"><strong style="color:#2AAFB8">Revisão lúdica (5 min)</strong> — flashcards, Simon Says, sacola mágica</td></tr>
+      <tr><td class="val"><strong style="color:#2AAFB8">Projeto principal (20–25 min)</strong> — vídeo, leitura, pesquisa, debate</td><td class="val"><strong style="color:#2AAFB8">Conteúdo novo (10 min)</strong> — via história ou jogo. Máx. 5–7 palavras</td></tr>
+      <tr><td class="val"><strong style="color:#2AAFB8">Produção autoral (12–15 min)</strong> — cria algo real: review, texto, script</td><td class="val"><strong style="color:#2AAFB8">Atividade criativa (7 min)</strong> — desenhar, colorir, montar, mover o corpo</td></tr>
+      <tr><td class="val"><strong style="color:#2AAFB8">Reflexão (3–5 min)</strong> — o que aprendeu? O que quer explorar na próxima?</td><td class="val"><strong style="color:#2AAFB8">Encerramento (3 min)</strong> — goodbye song ou frase ritual, sempre igual</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- INVESTIMENTO -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-arrow">↘</span><span class="sec-title">Investimento</span></div>
+  <table class="tbl">
+    <thead><tr><td width="40%"></td><td width="20%">Duração</td><td width="20%">Valor / hora</td><td width="20%">Total / mês</td></tr></thead>
+    <tbody>
+      <tr><td class="bold">Lorenzo</td><td class="val">1h por semana</td><td class="val">R$80</td><td class="val">R$320</td></tr>
+      <tr><td class="bold">Lucas</td><td class="val">30 min / semana</td><td class="val">R$80</td><td class="val">R$160</td></tr>
+      <tr class="total-row"><td>Total (ambos)</td><td></td><td></td><td>R$480</td></tr>
+    </tbody>
+  </table>
+  <p class="tbl-note">Professores com formação internacional cobram entre R$90–R$150/h no Brasil.</p>
+</div>
+
+<!-- PAGE 2 DIVIDER -->
+<hr class="divider">
+<div class="page-label">Exemplos de recursos digitais</div>
+
+<p class="res-intro">Seis plataformas usadas nas aulas — cada uma com um exemplo concreto para o Lorenzo (11 anos) e um para o Lucas (7 anos). Clica nos links para aceder directamente a cada actividade.</p>
+
+<!-- 1. BRITISH COUNCIL -->
+<div class="platform">
+  <div class="phead" style="background:#2AAFB8">
+    <div class="phead-icon">📚</div>
+    <div class="phead-info">
+      <div class="phead-title">British Council — LearnEnglish Kids + Teens</div>
+      <div class="phead-url">learnenglishkids.britishcouncil.org · learnenglishteens.britishcouncil.org</div>
+    </div>
+    <span class="phead-free">gratuito</span>
   </div>
-
-  <div class="blueprint">
-
-    <!-- MÊS 1 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#1B6B4A,#2D9B6E)">
-        <div>
-          <div class="month-num">Mês 1</div>
-          <div class="month-title">Fundação — ritmo, segurança, primeiras palavras</div>
-        </div>
-        <div class="month-milestone">Foco: Listening + Speaking puro</div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos <span class="age-pill">Teens</span></div>
+      <div class="img-wrap">
+        <img src="https://learnenglishteens.britishcouncil.org/sites/teens/files/styles/article_image_tall/public/2022-07/wordshake_teens_2.png" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Wordshake">
+        <div class="img-fallback" style="background:#E1F5EE;color:#0F6E56">🔤</div>
       </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#2D6A4F;border-color:#C8E6C9">🎓 Didi aprende e faz</div>
-          <div class="col-item">Memoriza a estrutura dos 5 momentos até estar automática</div>
-          <div class="col-item">Escolhe UMA canção de abertura para cada sobrinho — não muda no mês 1</div>
-          <div class="col-item">Prepara flashcards físicos dos primeiros 20 vocábulos (animais + cores + números)</div>
-          <div class="col-item">Cria o diário de 3 linhas no telemóvel</div>
-          <div class="col-item">Faz 4 aulas (1/semana cada) — não mais</div>
-          <div class="col-item"><strong>Foco didáctico:</strong> Fala inglês o tempo todo. Usa o português só para garantir segurança emocional</div>
-          <div class="col-item goal">Meta Didi: terminar o mês com a estrutura automática e 3 linhas de diário por aula</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo experiencia</div>
-          <div class="col-item">Escolhe o 1º projecto temático (propões 3 opções, ele decide)</div>
-          <div class="col-item">Primeiros check-ins em inglês: "how was your week?"</div>
-          <div class="col-item">Jogo de revisão com pontuação a cada aula</div>
-          <div class="col-item">Vocabulário do tema escolhido: 20–25 palavras em contexto</div>
-          <div class="col-item">Produz: um mini-texto de 3–5 frases sobre o tema</div>
-          <div class="col-item"><strong>Sem gramática explícita</strong> — estrutura entra pelo uso</div>
-          <div class="col-item goal">Marco: diz "I like / I don't like ___" com naturalidade</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas experiencia</div>
-          <div class="col-item">Aprende a canção de abertura — canta com a Didi</div>
-          <div class="col-item">Simon Says com partes do corpo + cores</div>
-          <div class="col-item">Ouve a história do 1º projecto (ex: "Ocean Friends")</div>
-          <div class="col-item">Vocabulário: 15–18 palavras do tema em contexto de jogo</div>
-          <div class="col-item">Produz: desenho do animal favorito do projecto com label em inglês</div>
-          <div class="col-item"><strong>Zero leitura ou escrita</strong> — tudo oral e visual</div>
-          <div class="col-item goal">Marco: reconhece e diz 10 palavras do tema sem hesitar</div>
-        </div>
-      </div>
+      <div class="act-header"><span class="act-name">Wordshake</span><span class="type-badge" style="background:#E1F5EE;color:#0F6E56">jogo de palavras</span></div>
+      <div class="act-link"><a href="https://learnenglishteens.britishcouncil.org/study-break/games/wordshake" target="_blank">↗ learnenglishteens.britishcouncil.org/study-break/games/wordshake</a></div>
+      <div class="act-desc">16 letras, 3 minutos — forma o máximo de palavras possível. Pontos extra por palavras longas. Desafio: bater o próprio recorde a cada semana.</div>
+      <div class="chips"><span class="chip">spelling</span><span class="chip">vocabulário</span><span class="chip">formação de palavras</span><span class="chip">pressão de tempo</span></div>
     </div>
-
-    <!-- MÊS 2 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#0E7C6B,#1BADA0)">
-        <div>
-          <div class="month-num">Mês 2</div>
-          <div class="month-title">Primeiro projecto completo — exploração + produção</div>
-        </div>
-        <div class="month-milestone">Foco: Primeiro artefacto real</div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos <span class="age-pill">Kids</span></div>
+      <div class="img-wrap">
+        <img src="https://learnenglishkids.britishcouncil.org/sites/kids/files/styles/activity_thumbnail/public/thumbnails/clean_and_green.jpg" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Clean and Green">
+        <div class="img-fallback" style="background:#E1F5EE;color:#0F6E56">♻️</div>
       </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#0E7C6B;border-color:#B2DFDB">🎓 Didi aprende e faz</div>
-          <div class="col-item">Aprende a técnica do "recast" — a substituir correcções directas</div>
-          <div class="col-item">Introduz recursos digitais nas aulas (1 plataforma nova por semana)</div>
-          <div class="col-item">Planeia o produto final do Projecto 1 para cada um</div>
-          <div class="col-item">Primeira reflexão de diário mais longa: o que está a aprender sobre cada sobrinho?</div>
-          <div class="col-item"><strong>Foco didáctico:</strong> Observar o que cada um faz ANTES de intervir. Esperar 5 segundos.</div>
-          <div class="col-item goal">Meta Didi: identificar 2 padrões — o que funciona com o Lorenzo vs o Lucas</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo experiencia</div>
-          <div class="col-item">Termina e apresenta o produto do Projecto 1</div>
-          <div class="col-item">Escolhe o tema do Projecto 2</div>
-          <div class="col-item">Começa a usar present continuous: "I'm playing / I'm watching"</div>
-          <div class="col-item">Usa TED-Ed ou Nat Geo em aula — descreve o que viu</div>
-          <div class="col-item">Produz: review de 5–8 frases de algo que escolheu (jogo, livro, vídeo)</div>
-          <div class="col-item goal">Marco: usa inglês espontaneamente para comentar algo durante a aula</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas experiencia</div>
-          <div class="col-item">Termina o Projecto 1 — celebração pequena com a Didi</div>
-          <div class="col-item">Escolhe o tema do Projecto 2 (2 opções apresentadas)</div>
-          <div class="col-item">Aprende "I want / I have / I see" dentro do novo tema</div>
-          <div class="col-item">Introdução de um jogo digital (Wordwall, Quizlet)</div>
-          <div class="col-item">Produz: mini livro de 4 páginas com desenho + palavra em inglês</div>
-          <div class="col-item goal">Marco: canta uma música do projecto de cor, com pronúncia natural</div>
-        </div>
-      </div>
+      <div class="act-header"><span class="act-name">Clean and Green</span><span class="type-badge" style="background:#E1F5EE;color:#0F6E56">jogo interativo</span></div>
+      <div class="act-link"><a href="https://learnenglishkids.britishcouncil.org/fun-games/games/clean-green" target="_blank">↗ learnenglishkids.britishcouncil.org/fun-games/games/clean-green</a></div>
+      <div class="act-desc">O quarto está uma bagunça! 12 objectos para reciclar — arrasta cada item para o contentor certo. Paper, glass, plastic, metal.</div>
+      <div class="chips"><span class="chip">recycle, sort</span><span class="chip">bottle, can, newspaper</span><span class="chip">ambiente</span></div>
     </div>
-
-    <!-- MÊS 3 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#1565A0,#2196D4)">
-        <div>
-          <div class="month-num">Mês 3</div>
-          <div class="month-title">Consolidação — estrutura emerge, autocorrecção começa</div>
-        </div>
-        <div class="month-milestone">Avaliação observacional de 90 dias</div>
-      </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#1565A0;border-color:#BBDEFB">🎓 Didi aprende e faz</div>
-          <div class="col-item">Faz a primeira auto-avaliação como professora: o que mudaria nos primeiros 3 meses?</div>
-          <div class="col-item">Compara os produtos do mês 1 com os do mês 3 — regista a evolução</div>
-          <div class="col-item">Começa a introduzir estrutura gramatical para o Lorenzo: "did you notice that...?"</div>
-          <div class="col-item">Experimenta uma aula dos dois juntos — se fizer sentido logisticamente</div>
-          <div class="col-item"><strong>Foco didáctico:</strong> Deixar mais silêncio. Esperar que eles completem, antes de ajudar.</div>
-          <div class="col-item goal">Meta Didi: Lorenzo usou inglês fora da aula? Lucas pediu para jogar de novo?</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo experiencia</div>
-          <div class="col-item">2º projecto em curso — já com mais autonomia na escolha de recursos</div>
-          <div class="col-item">Primeiras tentativas de autocorrecção espontânea</div>
-          <div class="col-item">Começa a ler textos curtos em inglês (Nat Geo Kids, artigos simples)</div>
-          <div class="col-item">Usa "can/can't" e comparações: "dolphins are faster than..."</div>
-          <div class="col-item">Produz: guia visual ou apresentação de 1 min sobre o tema do projecto</div>
-          <div class="col-item goal">Marco: lê um parágrafo curto em inglês com compreensão geral</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas experiencia</div>
-          <div class="col-item">2º projecto em curso — pede activamente as actividades favoritas</div>
-          <div class="col-item">Reconhece padrões sonoros: rimas, ritmos, palavras semelhantes ao português</div>
-          <div class="col-item">Começa a identificar palavras escritas que já conhece oralmente</div>
-          <div class="col-item">Usa "This is a ___ / It's ___" com objetos reais</div>
-          <div class="col-item">Produz: história ditada à Didi (3–4 frases) com personagem inventado</div>
-          <div class="col-item goal">Marco: mistura inglês no português do dia a dia ("Didi, the dog is big!")</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MÊS 4 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#6A3093,#9B59B6)">
-        <div>
-          <div class="month-num">Mês 4</div>
-          <div class="month-title">Expansão — estruturas mais complexas, mais autonomia</div>
-        </div>
-        <div class="month-milestone">Foco: Reading + primeiros esboços de Writing</div>
-      </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#6A3093;border-color:#E1BEE7">🎓 Didi aprende e faz</div>
-          <div class="col-item">Introduz o conceito de "vocabulary journal" para ambos</div>
-          <div class="col-item">Para o Lorenzo: começa a trabalhar passado simples com verbos irregulares (em contexto)</div>
-          <div class="col-item">Para o Lucas: introduz leitura de palavras simples (3–4 letras) via jogos</div>
-          <div class="col-item">Experimenta uma actividade fora do esquema habitual: culinária, natureza, saída</div>
-          <div class="col-item"><strong>Foco didáctico:</strong> Dar ao Lorenzo mais tempo para produzir sem intervir. Resistir à tentação de ajudar logo.</div>
-          <div class="col-item goal">Meta Didi: o Lorenzo sugeriu espontaneamente um tema ou actividade?</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo experiencia</div>
-          <div class="col-item">3º projecto — ele lidera mais a escolha dos recursos</div>
-          <div class="col-item">Past simple em contexto: "I watched / I played / I went"</div>
-          <div class="col-item">Lê textos de 2–3 parágrafos com compreensão parcial</div>
-          <div class="col-item">Escreve 8–10 frases com autonomia crescente</div>
-          <div class="col-item">Produz: texto de opinião ("I think... because...") sobre o tema do projecto</div>
-          <div class="col-item goal">Marco: escreve 5 frases em inglês sem ajuda, com sentido claro</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas experiencia</div>
-          <div class="col-item">3º projecto — reconhece padrões entre projectos anteriores</div>
-          <div class="col-item">Primeiras leituras guiadas: "Brown Bear", "The Very Hungry Caterpillar"</div>
-          <div class="col-item">Escreve (ou copia) palavras do projecto no vocabulary journal</div>
-          <div class="col-item">Usa "What is this? / What colour is it?" como perguntas reais</div>
-          <div class="col-item">Produz: vocabulary journal com 20+ palavras ilustradas dos projectos</div>
-          <div class="col-item goal">Marco: reconhece 20+ palavras escritas dentro dos temas explorados</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MÊS 5 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#B7410E,#E05C2A)">
-        <div>
-          <div class="month-num">Mês 5</div>
-          <div class="month-title">Autonomia — eles lideram mais, Didi observa mais</div>
-        </div>
-        <div class="month-milestone">Foco: Produção autoral real</div>
-      </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#B7410E;border-color:#FFCCBC">🎓 Didi aprende e faz</div>
-          <div class="col-item">Começa a preparar o produto final do mês 6 — o "showcase"</div>
-          <div class="col-item">Dá ao Lorenzo mais tempo de produção e menos conteúdo novo</div>
-          <div class="col-item">Para o Lucas: introduz jogos de leitura simples (palavra + imagem + voz)</div>
-          <div class="col-item">Revisita o diário dos 5 meses — o que mudou na tua forma de ensinar?</div>
-          <div class="col-item"><strong>Foco didáctico:</strong> Reduzir as tuas falas. Fazer mais perguntas, dar menos respostas.</div>
-          <div class="col-item goal">Meta Didi: consegues ficar 10 min numa aula sem falar em português?</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo experiencia</div>
-          <div class="col-item">4º projecto — escolha e planeamento quase totalmente autónomos</div>
-          <div class="col-item">Conduz mini-conversas de 3–5 min sobre o seu tema em inglês</div>
-          <div class="col-item">Revê e edita os seus próprios textos com orientação mínima</div>
-          <div class="col-item">Começa a preparar a apresentação final do mês 6</div>
-          <div class="col-item">Produz: script de podcast ou apresentação de 2–3 min sobre o 4º projecto</div>
-          <div class="col-item goal">Marco: conversa 3–5 min sobre um tema que escolheu, sem guião</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas experiencia</div>
-          <div class="col-item">4º projecto — pede activamente as actividades preferidas</div>
-          <div class="col-item">Usa inglês para comentar o que está a fazer ("I'm drawing a fish!")</div>
-          <div class="col-item">Canta músicas dos projectos anteriores de cor</div>
-          <div class="col-item">Prepara algo simples para "mostrar" no mês 6</div>
-          <div class="col-item">Produz: "My English Book" — compilação dos melhores trabalhos dos 5 meses</div>
-          <div class="col-item goal">Marco: usa frases completas espontaneamente em inglês durante a aula</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MÊS 6 -->
-    <div class="month-block">
-      <div class="month-head" style="background:linear-gradient(90deg,#1B6B4A,#2D9B6E)">
-        <div>
-          <div class="month-num">Mês 6</div>
-          <div class="month-title">Chegada — showcase, celebração, próxima fase</div>
-        </div>
-        <div class="month-milestone">Avaliação final — comparar com metas</div>
-      </div>
-      <div class="month-cols">
-        <div class="month-col">
-          <div class="col-tag" style="color:#2D6A4F;border-color:#C8E6C9">🎓 Didi avalia e celebra</div>
-          <div class="col-item">Organiza o "showcase" informal — podem ser os pais, a avó, alguém que eles escolham</div>
-          <div class="col-item">Compara os produtos do mês 1 e mês 6 — regista a diferença por escrito</div>
-          <div class="col-item">Revisita as metas da proposta — quantas foram alcançadas?</div>
-          <div class="col-item">Pergunta a cada um: "what was your favourite thing we did in English?"</div>
-          <div class="col-item">Planeia a fase 2 — novos temas, nível mais alto, possíveis mudanças de estrutura</div>
-          <div class="col-item goal">Meta Didi: sentires-te professora. Não especialista — professora.</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#2AAFB8;border-color:#B2EBF2">Lorenzo — meta alcançada se:</div>
-          <div class="col-item goal">Conduz mini-conversa sobre rotina e interesses</div>
-          <div class="col-item goal">Lê textos curtos com compreensão geral</div>
-          <div class="col-item goal">Escreve 3–5 frases com autonomia</div>
-          <div class="col-item goal">Usa present simple, present continuous e can/can't</div>
-          <div class="col-item goal">Vocabulário activo de 200–300 palavras contextualizadas</div>
-          <div class="col-item goal">Produziu 3+ artefactos próprios</div>
-          <div class="col-item goal">Participou na escolha de 2+ temas de projecto</div>
-        </div>
-        <div class="month-col">
-          <div class="col-tag" style="color:#B07200;border-color:#FFE082">Lucas — meta alcançada se:</div>
-          <div class="col-item goal">Compreende e responde a comandos simples</div>
-          <div class="col-item goal">Vocabulário activo de 80–120 palavras nos temas explorados</div>
-          <div class="col-item goal">Canta 5–8 músicas com pronúncia natural</div>
-          <div class="col-item goal">Usa "I want / I like / This is / Can I...?"</div>
-          <div class="col-item goal">Identifica cores, números 1–20, partes do corpo, animais</div>
-          <div class="col-item goal">Produziu 2+ artefactos próprios</div>
-          <div class="col-item goal">Participa em jogos e projectos com entusiasmo</div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- end blueprint -->
+  </div>
 </div>
 
-<!-- NOTA FINAL -->
-<div class="foot-note">
-  <strong>Uma nota honesta para a professora.</strong> Há dias em que uma aula vai correr mal. O Lorenzo vai estar distraído. O Lucas vai querer jogar outra coisa. Tu vais sentir que não sabes o que estás a fazer. Isso não é falha — é o trabalho normal de ensinar. O diário de 3 linhas existe precisamente para esses dias: ajuda-te a ver que o dia difícil de hoje faz parte de um progresso real que está a acontecer. A língua não é aprendida em aulas individuais — é aprendida na soma de experiências ao longo do tempo. O teu trabalho é aparecer, com estrutura e afecto. O resto acontece sozinho.
+<!-- 2. WORDWALL -->
+<div class="platform">
+  <div class="phead" style="background:#3B6FD4">
+    <div class="phead-icon">🎮</div>
+    <div class="phead-info">
+      <div class="phead-title">Wordwall</div>
+      <div class="phead-url">wordwall.net — mais de 30 milhões de actividades prontas</div>
+    </div>
+    <span class="phead-free">gratuito</span>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos</div>
+      <div class="img-wrap">
+        <img src="https://wordwall.net/img/screenshots/gameshow.png" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Wordwall Gameshow">
+        <div class="img-fallback" style="background:#E6F1FB;color:#185FA5">🏆</div>
+      </div>
+      <div class="act-header"><span class="act-name">English Tenses Gameshow</span><span class="type-badge" style="background:#E6F1FB;color:#185FA5">quiz</span></div>
+      <div class="act-link"><a href="https://wordwall.net/en-gb/community/english-tenses" target="_blank">↗ wordwall.net/en-gb/community/english-tenses</a></div>
+      <div class="act-desc">Formato "Gameshow" — escolhe a resposta certa antes do tempo acabar. Present/past tense. Pode desafiar a Didi a jogar ao mesmo tempo.</div>
+      <div class="chips"><span class="chip">past tense</span><span class="chip">present simple</span><span class="chip">verbos irregulares</span><span class="chip">gramática</span></div>
+    </div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos</div>
+      <div class="img-wrap">
+        <img src="https://wordwall.net/img/screenshots/match.png" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Wordwall Match">
+        <div class="img-fallback" style="background:#E6F1FB;color:#185FA5">🐾</div>
+      </div>
+      <div class="act-header"><span class="act-name">Animals Match-Up</span><span class="type-badge" style="background:#E6F1FB;color:#185FA5">memória</span></div>
+      <div class="act-link"><a href="https://wordwall.net/en-gb/community/animals-english" target="_blank">↗ wordwall.net/en-gb/community/animals-english</a></div>
+      <div class="act-desc">Une o nome do animal à imagem — cat, dog, bird, lion, elephant. A Didi pode criar actividades novas com os temas de cada projecto em menos de 1 minuto.</div>
+      <div class="chips"><span class="chip">animal names</span><span class="chip">matching</span><span class="chip">colours</span><span class="chip">numbers</span></div>
+    </div>
+  </div>
 </div>
 
-</div><!-- end wrap -->
+<!-- 3. YOUTUBE -->
+<div class="platform">
+  <div class="phead" style="background:#CC2200">
+    <div class="phead-icon">▶️</div>
+    <div class="phead-info">
+      <div class="phead-title">YouTube — canais educativos</div>
+      <div class="phead-url">TED-Ed · Super Simple Songs · Cocomelon</div>
+    </div>
+    <span class="phead-free">gratuito</span>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos</div>
+      <div class="img-wrap">
+        <img src="https://i.ytimg.com/vi/OHZe5HIEFTU/hqdefault.jpg" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="TED-Ed">
+        <div class="img-fallback" style="background:#FCEBEB;color:#A32D2D">🎬</div>
+      </div>
+      <div class="act-header"><span class="act-name">TED-Ed — "How do animals see in the dark?"</span><span class="type-badge" style="background:#FCEBEB;color:#A32D2D">vídeo + debate</span></div>
+      <div class="act-link"><a href="https://ed.ted.com/lessons/how-do-animals-see-in-the-dark-anna-stockl" target="_blank">↗ ed.ted.com/lessons/how-do-animals-see-in-the-dark-anna-stockl</a></div>
+      <div class="act-desc">Vídeo animado de 5 min com legendas em inglês. Anota 3 factos e apresenta à Didi. Há centenas de temas — ele escolhe o próximo.</div>
+      <div class="chips"><span class="chip">scientific vocab</span><span class="chip">note-taking</span><span class="chip">speaking</span><span class="chip">comprehension</span></div>
+    </div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos</div>
+      <div class="img-wrap">
+        <img src="https://i.ytimg.com/vi/tVlcKp3bWH8/hqdefault.jpg" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Hello Song">
+        <div class="img-fallback" style="background:#FCEBEB;color:#A32D2D">🎵</div>
+      </div>
+      <div class="act-header"><span class="act-name">Super Simple Songs — "Hello Song"</span><span class="type-badge" style="background:#FCEBEB;color:#A32D2D">música</span></div>
+      <div class="act-link"><a href="https://www.youtube.com/watch?v=tVlcKp3bWH8" target="_blank">↗ youtube.com/watch?v=tVlcKp3bWH8</a></div>
+      <div class="act-desc">Canção de abertura ideal para o ritual do início da aula. Letra simples e repetitiva. Aprende a cumprimentar em inglês cantando, sem esforço consciente.</div>
+      <div class="chips"><span class="chip">hello / goodbye</span><span class="chip">how are you?</span><span class="chip">I'm fine</span><span class="chip">nomes</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. STORYLINE ONLINE -->
+<div class="platform">
+  <div class="phead" style="background:#2D6A4F">
+    <div class="phead-icon">📖</div>
+    <div class="phead-info">
+      <div class="phead-title">Storyline Online</div>
+      <div class="phead-url">storylineonline.net — livros lidos por actores famosos</div>
+    </div>
+    <span class="phead-free">gratuito</span>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos</div>
+      <div class="img-wrap">
+        <img src="https://storylineonline.net/wp-content/uploads/2022/04/Stellaluna-Featured.jpg" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Stellaluna">
+        <div class="img-fallback" style="background:#EAF3DE;color:#3B6D11">🦇</div>
+      </div>
+      <div class="act-header"><span class="act-name">Stellaluna — Paloma Jimenez</span><span class="type-badge" style="background:#EAF3DE;color:#3B6D11">história + escrita</span></div>
+      <div class="act-link"><a href="https://storylineonline.net/books/stellaluna/" target="_blank">↗ storylineonline.net/books/stellaluna</a></div>
+      <div class="act-desc">Um morcego que se perde entre pássaros. Ouve a história, escreve 5 adjectivos para descrever a Stellaluna. Debate: "Have you ever felt like you didn't fit in?"</div>
+      <div class="chips"><span class="chip">adjectives</span><span class="chip">emotions</span><span class="chip">narrative vocab</span><span class="chip">writing</span></div>
+    </div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos</div>
+      <div class="img-wrap">
+        <img src="https://storylineonline.net/wp-content/uploads/2014/10/snowyday-featured.jpg" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="The Snowy Day">
+        <div class="img-fallback" style="background:#EAF3DE;color:#3B6D11">❄️</div>
+      </div>
+      <div class="act-header"><span class="act-name">The Snowy Day — LeVar Burton</span><span class="type-badge" style="background:#EAF3DE;color:#3B6D11">história ilustrada</span></div>
+      <div class="act-link"><a href="https://storylineonline.net/books/the-snowy-day/" target="_blank">↗ storylineonline.net/books/the-snowy-day</a></div>
+      <div class="act-desc">Um menino explora a neve. Vocabulário visual simples. Depois, desenha a cena favorita e dita uma frase à Didi: "Peter is ___."</div>
+      <div class="chips"><span class="chip">weather</span><span class="chip">colours</span><span class="chip">actions</span><span class="chip">simple sentences</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. NAT GEO KIDS -->
+<div class="platform">
+  <div class="phead" style="background:#B07200">
+    <div class="phead-icon">🌍</div>
+    <div class="phead-info">
+      <div class="phead-title">National Geographic Kids</div>
+      <div class="phead-url">kids.nationalgeographic.com</div>
+    </div>
+    <span class="phead-free">gratuito</span>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos</div>
+      <div class="img-wrap">
+        <img src="https://i.natgeofe.com/n/4cebbf38-5df4-4ed0-864a-4ebeb1de8f22/NationalGeographic_2572187.jpg?w=636&h=475" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Dolphin">
+        <div class="img-fallback" style="background:#FEF3C7;color:#92400E">🐬</div>
+      </div>
+      <div class="act-header"><span class="act-name">Bottlenose Dolphin — artigo + vídeo</span><span class="type-badge" style="background:#FEF3C7;color:#92400E">leitura + vídeo</span></div>
+      <div class="act-link"><a href="https://kids.nationalgeographic.com/animals/mammals/facts/bottlenose-dolphin" target="_blank">↗ kids.nationalgeographic.com/animals/mammals/facts/bottlenose-dolphin</a></div>
+      <div class="act-desc">Artigo com fotos e vídeo em inglês. Sublinha 3 factos surpreendentes e apresenta à Didi. Escolhem um animal diferente a cada bloco temático.</div>
+      <div class="chips"><span class="chip">scientific vocab</span><span class="chip">numbers + data</span><span class="chip">description</span><span class="chip">speaking</span></div>
+    </div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos</div>
+      <div class="img-wrap">
+        <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2574860.jpg?w=636&h=475" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Animal quiz">
+        <div class="img-fallback" style="background:#FEF3C7;color:#92400E">🦁</div>
+      </div>
+      <div class="act-header"><span class="act-name">Animal photo quiz</span><span class="type-badge" style="background:#FEF3C7;color:#92400E">quiz com fotos</span></div>
+      <div class="act-link"><a href="https://kids.nationalgeographic.com/games/quiz" target="_blank">↗ kids.nationalgeographic.com/games/quiz</a></div>
+      <div class="act-desc">Foto de um animal — adivinha o nome em inglês. Multiple choice. Depois de cada resposta aparece um facto curto. Perfeito para encerrar a aula com uma vitória pequena.</div>
+      <div class="chips"><span class="chip">animal names</span><span class="chip">habitats</span><span class="chip">has / lives / eats</span><span class="chip">guessing</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. QUIZLET -->
+<div class="platform">
+  <div class="phead" style="background:#4C2C9B">
+    <div class="phead-icon">🃏</div>
+    <div class="phead-info">
+      <div class="phead-title">Quizlet</div>
+      <div class="phead-url">quizlet.com — flashcards com repetição espaçada</div>
+    </div>
+    <span class="phead-free">gratuito</span>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="col-label">Lorenzo — 11 anos</div>
+      <div class="img-wrap">
+        <img src="https://quizlet.com/cdn-cgi/image/f=auto,fit=cover,h=300,w=400/https://o.quizlet.com/7Wam0aEBbw.png" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Quizlet verbs">
+        <div class="img-fallback" style="background:#EDE9FE;color:#5B21B6">📚</div>
+      </div>
+      <div class="act-header"><span class="act-name">Irregular verbs — past tense</span><span class="type-badge" style="background:#EDE9FE;color:#5B21B6">flashcards</span></div>
+      <div class="act-link"><a href="https://quizlet.com/subject/irregular-verbs-english" target="_blank">↗ quizlet.com/subject/irregular-verbs-english</a></div>
+      <div class="act-desc">Modo "Learn" com repetição espaçada + "Match" como jogo de memória. 10 minutos por semana fora da aula. Vê o progresso em tempo real.</div>
+      <div class="chips"><span class="chip">irregular verbs</span><span class="chip">past tense</span><span class="chip">spelling</span><span class="chip">autonomia</span></div>
+    </div>
+    <div class="col">
+      <div class="col-label">Lucas — 7 anos</div>
+      <div class="img-wrap">
+        <img src="https://quizlet.com/cdn-cgi/image/f=auto,fit=cover,h=300,w=400/https://o.quizlet.com/E6FH1CpqPcwBtxlf3CvVqw.png" onerror="this.style.display='none';this.parentNode.querySelector('.img-fallback').style.display='flex'" alt="Quizlet colours">
+        <div class="img-fallback" style="background:#EDE9FE;color:#5B21B6">🎨</div>
+      </div>
+      <div class="act-header"><span class="act-name">Colours + Numbers — iniciante</span><span class="type-badge" style="background:#EDE9FE;color:#5B21B6">flashcards</span></div>
+      <div class="act-link"><a href="https://quizlet.com/subject/colors-in-english" target="_blank">↗ quizlet.com/subject/colors-in-english</a></div>
+      <div class="act-desc">Cartões com imagem + palavra. Vê a cor, diz o nome, vira para confirmar. Modo Flashcard ideal como aquecimento nos primeiros 5 minutos da aula.</div>
+      <div class="chips"><span class="chip">red, blue, green</span><span class="chip">1–10</span><span class="chip">shapes</span><span class="chip">aquecimento</span></div>
+    </div>
+  </div>
+</div>
+
+<p style="text-align:center;font-size:11px;color:#AAA;font-style:italic;margin-top:32px;padding-top:20px;border-top:1px solid #E8E8E8">Preparado com amor e intenção — para o Lorenzo e o Lucas aprenderem inglês do jeito certo.</p>
+
+</div>
 </body>
 </html>
